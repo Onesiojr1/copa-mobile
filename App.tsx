@@ -10,6 +10,8 @@ import { THEME } from "./src/styles/theme";
 import { Loading } from "./src/components/Loading";
 import { SignIn } from "./src/screens/Signin";
 import { AuthContextProvider } from "./src/contexts/AuthContext";
+import { New } from "./src/screens/new";
+import { Find } from "./src/screens/find";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -26,7 +28,7 @@ export default function App() {
           backgroundColor="transparent"
           translucent
         />
-        {fontsLoaded ? <SignIn /> : <Loading />}
+        {fontsLoaded ? <Find /> : <Loading />}
       </AuthContextProvider>
     </NativeBaseProvider>
   );
